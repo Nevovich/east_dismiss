@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West_call</title>
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row westcall-tariff-card_row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 westcall-tariff-card">
+                <span class="westcall-tariff-card__title">Яркое решение за 300</span>
+                <div class="westcall-tariff-card__slider">
+                    <div class="westcall-tariff-card__slider-item">
+                        <p>300<span> мин</span></p>
+                        <p>30<span> gb</span></p>
+                    </div>
+                    <div class="westcall-tariff-card__slider-item">
+                        <p>300<span> мин</span></p>
+                        <p>30<span> gb</span></p>
+                    </div>
+                    <div class="westcall-tariff-card__slider-item">
+                        <p>300<span> мин</span></p>
+                        <p>30<span> gb</span></p>
+                    </div>
+                </div>
+                <p class="westcall-tariff-card__text">+ 300 шт. исходящие sms/mms</p>
+                <!-- SWITCH -->
+                <div class="material-switch">
+                    <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox"/>
+                    <label for="someSwitchOptionInfo" class="label-info"></label>
+                    <span class="westcall-tariff-card__text">+ 100 ₽/мес для безлимита в 4G</span>
+                </div>
+                <div class="westcall-tariff-card__info-bezlimit">
+                    <img src="img/message.png" alt="message icon">
+                    <p>+ Безлимит на интернет сервисы</p>
+                    <img src="img/info-icon.png" alt="info icon">
+                </div>
+                <div class="westcall-tariff-card__price-block">
+                    <p><span>300</span>₽/мес</p>
+                    <a href="#" class="btn-connect jsMyModal">Подключить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $('.westcall-tariff-card__slider').slick({
+        vertical: true,
+        verticalSwiping: true,
+        dots: true,
+      });
+    });
+</script>
+</body>
+</html>

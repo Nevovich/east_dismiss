@@ -1,0 +1,98 @@
+
+@import "_switch.scss"    
+@import "_fonts.scss"
+.westcall
+    &-tariff-card
+        &_row
+            padding-left: 15px
+            padding-right: 15px
+        font-family: 'Gotham Pro'
+        padding: 28px
+        background: linear-gradient(25deg, rgba(31,66,106,1) 0%, rgba(64,121,255,1) 100%)
+        color: #fff
+        padding-bottom: 13px
+        &__title
+            font-size: 16px
+            font-weight: 500
+            margin-bottom: 50px
+        &__text
+            font-size: 11px
+        &__slider
+            margin-top: 19px
+            margin-bottom: 0 !important
+            &-item
+                outline: 0 !important
+                & p
+                    font-size: 41px
+                    font-weight: 500
+                    span:first-child
+                        font-size: 24px
+        &__info-bezlimit
+            border-top: 1px solid rgba(255, 255, 255, 0.4)
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+            transform: scale(1.24)
+            padding: 10px 25px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            & img
+                width: 10px
+                object-fit: contain
+            & p
+                font-size: 9px
+                margin-top: 9px
+        &__price-block
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-top: 59px
+            & p 
+                & span
+                    font-weight: 500
+                    font-size: 36px
+
+
+
+
+.westcall-tariff-card__slider .slick
+    &-next
+        right: 0
+        left: 0
+        top: auto
+        bottom: 13px !important
+        &:before
+            content: url(../img/slick-down.png)
+            width: 37px
+            height: 37px
+    &-prev
+        left: 0
+        top: 34px
+        &:before
+            content: url(../img/slick-up.png)
+            width: 30px !important
+            height: 30px !important
+    &-list
+        margin-left: 33px
+    &-slider
+    &-dots
+        display: flex
+        flex-direction: column
+        bottom: auto
+        width: auto
+        top: 57px
+        margin-left: 5px
+        & li
+            height: 13px
+            & button
+                background: #fff
+                opacity: 0.5
+                height: 3px
+                width: 8px
+                padding: 0
+        & .slick-active
+            & button
+                opacity: 1
+
+
+
+            
