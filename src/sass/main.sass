@@ -5,7 +5,6 @@
     &-tariff-card
         outline: none !important
         margin-right: 20px
-        // max-width: 350px
         &_light
             background: linear-gradient(25deg, #1f426a 0%, #4079ff 50%)
         &_row
@@ -52,17 +51,20 @@
             & p
     &-extra
         &_row
-            margin: 0 25px
+            margin: 0 20px
         &__card
             color: #fff
             outline: none !important
             font-family: 'Gotham Pro'
             min-height: 460px
-            max-width: 400px
             margin-right: 20px
             position: relative
             background: linear-gradient(34deg, rgba(42,43,60,1) 0%, rgba(31,66,106,1) 100%)
             padding: 18px 42px 21px
+            transition: .3s
+            margin-top: 10px
+            &:hover
+                transform: translateY(-10px)
             & strong
                 display: inline-block
                 font-size: 21px
@@ -88,26 +90,18 @@
                 & p
                     font-size: 9px
                     padding: 0 20px
-@media screen and ( max-width: 720px ) and ( min-width: 609px )
-    .westcall
         &-extra
             &_row
-                margin: 0 20px
+                margin: 0
             &__card
-                min-width: 310px
-                margin: 0 calc( (100vw - 510px) / 2 )
-@media screen and ( max-width: 608px )  
-    .westcall
-        &-extra
-            &_row
-                margin: 0 0
-            &__card
-                // width: 273px !important
-                margin: 0 5px
+                margin: 0 calc( (100vw - 380px) / 2 )
 @media screen and ( max-width: 390px )
     .westcall
         &-tariff-card
             margin: 0
+        &-extra
+            &__card
+                margin: 0
 @media screen and ( min-width: 720px ) and ( max-width: 860px )
     .westcall
         &_row
