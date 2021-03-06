@@ -52,8 +52,10 @@
             & p
     &-extra
         &_row
+            margin: 0 25px
         &__card
             color: #fff
+            outline: none !important
             font-family: 'Gotham Pro'
             min-height: 460px
             max-width: 400px
@@ -97,13 +99,19 @@
 @media screen and ( max-width: 608px )  
     .westcall
         &-extra
+            &_row
+                margin: 0 0
             &__card
-                min-width: 310px
-                margin: 0 calc( (100vw - 510px) / 2 )
+                // width: 273px !important
+                margin: 0 5px
 @media screen and ( max-width: 390px )
     .westcall
         &-tariff-card
             margin: 0
+@media screen and ( min-width: 720px ) and ( max-width: 860px )
+    .westcall
+        &_row
+            margin: 0 25px
 .westcall-tariff-card__price
     font-size: 36px
     font-weight: 500
@@ -156,7 +164,15 @@
         & .slick-active
             & button
                 opacity: 1
-
-
+.hover-annotation
+    position: absolute
+    bottom: 32px
+    max-width: 180px
+    border-radius: 10px
+    background: #0c2647
+    padding: 15px
+    opacity: 0
+    font-size: 12px
+    transition: .4s
 
             

@@ -39,7 +39,8 @@
                 <div class="westcall-tariff-card__info-bezlimit">
                     <img src="img/message.png" alt="message icon">
                     <p><nobr>+ Безлимит на интернет сервисы</nobr></p>
-                    <img src="img/info-icon.png" alt="info icon">
+                    <img class="annotation-img" src="img/info-icon.png" alt="info icon">
+                    <div class="hover-annotation">Мессенджеры, соцсети, карты, почтовые сервисы, музыка, видео</div>
                 </div>
                 <div class="westcall-tariff-card__price-block">
                     <p><span class="westcall-tariff-card__price">300</span>₽/мес</p>
@@ -47,7 +48,6 @@
                 </div>
             </div>
             <!-- Яркое решение за 400  -->
-            <!-- ЕГО КОПИРУЕМ -->
             <div class="westcall-tariff-card">
                 <span class="westcall-tariff-card__title">Яркое решение за 400</span>
                 <div class="westcall-tariff-card__slider">
@@ -74,7 +74,8 @@
                 <div class="westcall-tariff-card__info-bezlimit">
                     <img src="img/message.png" alt="message icon">
                     <p><nobr>+ Безлимит на интернет сервисы</nobr></p>
-                    <img src="img/info-icon.png" alt="info icon">
+                    <img class="annotation-img" src="img/info-icon.png" alt="info icon">
+                    <div class="hover-annotation">Мессенджеры, соцсети, карты, почтовые сервисы, музыка, видео</div>
                 </div>
                 <div class="westcall-tariff-card__price-block">
                     <p><span class="westcall-tariff-card__price">400</span>₽/мес</p>
@@ -107,7 +108,8 @@
                 <div class="westcall-tariff-card__info-bezlimit">
                     <img src="img/message.png" alt="message icon">
                     <p><nobr>+ Безлимит на интернет сервисы</nobr></p>
-                    <img src="img/info-icon.png" alt="info icon" id="i-have-a-tooltip">
+                    <img class="annotation-img" src="img/info-icon.png" alt="info icon">
+                    <div class="hover-annotation">Мессенджеры, соцсети, карты, почтовые сервисы, музыка, видео</div>
                 </div>
                 <div class="westcall-tariff-card__price-block">
                     <p><span class="westcall-tariff-card__price">800</span>₽/мес</p>
@@ -140,7 +142,8 @@
                 <div class="westcall-tariff-card__info-bezlimit">
                     <img src="img/message.png" alt="message icon">
                     <p><nobr>+ Безлимит на интернет сервисы</nobr></p>
-                    <img src="img/info-icon.png" alt="info icon" id="i-have-a-tooltip">
+                    <img class="annotation-img" src="img/info-icon.png" alt="info icon">
+                    <div class="hover-annotation">Мессенджеры, соцсети, карты, почтовые сервисы, музыка, видео</div>
                 </div>
                 <div class="westcall-tariff-card__price-block">
                     <p><span class="westcall-tariff-card__price">1000</span>₽/мес</p>
@@ -165,7 +168,8 @@
                 <div class="westcall-tariff-card__info-bezlimit">
                     <img src="img/message.png" alt="message icon">
                     <p><nobr>+ Безлимит на интернет сервисы</nobr></p>
-                    <img src="img/info-icon.png" alt="info icon" id="i-have-a-tooltip">
+                    <img class="annotation-img" src="img/info-icon.png" alt="info icon">
+                    <div class="hover-annotation">Мессенджеры, соцсети, карты, почтовые сервисы, музыка, видео</div>
                 </div>
                 <div class="westcall-tariff-card__price-block">
                     <p><span class="westcall-tariff-card__price">1750</span>₽/мес</p>
@@ -178,7 +182,7 @@
                 <img src="img/infinity_additional.png" alt="infinity"><br>
                 <div class="westcall-extra__card_text-block">
                     <strong>Безлимитный интернет в 4G</strong> <br>
-                    <p class="westcall-extra__card_text">Услуга позволяет пользоваться безлимитным интернетом в сети LTE (4G) с первого МБ трафика, не расходуя основной пакет интернета. Если пакет интернета в рамках тарифного плана заканчивается, трафик в сети 4G предоставляется на максиальной скорости.</p>
+                    <p class="westcall-extra__card_text" style="font-size: 15px;">Услуга позволяет пользоваться безлимитным интернетом в сети LTE (4G) с первого МБ трафика, не расходуя основной пакет интернета. Если пакет интернета в рамках тарифного плана заканчивается, трафик в сети 4G предоставляется на максиальной скорости.</p>
                     <p style="position: absolute;bottom: 0;"><span class="westcall-tariff-card__price">100</span>₽/мес</p>
                 </div>
             </div>
@@ -276,13 +280,29 @@
                 arrows: false,
                 centerMode: true
             }
+        },
+        {
+            breakpoint: 609,
+            settings: {
+                slidesToShow: 1,
+                arrows: false,
+                centerMode: true
+            }
+        },
+        {
+            breakpoint: 445,
+            settings: {
+                slidesToShow: 1,
+                arrows: false,
+                centerMode: false
+            }
         }
         ],
       });
       $('#card__not-slider').slick('unslick');
       $('.westcall-tariff-card_row').slick({
         speed: 250,
-        autoplay: true,
+        // autoplay: true,
         arrows: true,
         infinite: false,
         slidesToShow: 3,
@@ -307,6 +327,8 @@
         card.forEach( function(el) {
         let inp = el.querySelector(`input`);
         let label = el.querySelector('.label-info');
+        let annotationImg = el.querySelector('.annotation-img');
+        
 
         inp.addEventListener(`click`, () => {
             let pirce = el.querySelector(`.westcall-tariff-card__price`);
@@ -323,8 +345,17 @@
             };
             // console.log(text)
             pirce.innerHTML = text;
+        });
+            annotationImg.addEventListener(`mouseover`, () => {
+                let annotation = el.querySelector('.hover-annotation');
+                annotation.style.cssText = "opacity: 1";
+            });
+            annotationImg.addEventListener(`mouseout`, () => {
+                let annotation = el.querySelector('.hover-annotation');
+                annotation.style.cssText = "opacity: 0";
             });
         });
+        
     });
 </script>
 </body>
