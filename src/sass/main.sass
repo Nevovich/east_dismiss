@@ -5,6 +5,10 @@
     &-tariff-card
         outline: none !important
         margin-right: 20px
+        & .btn-connect
+            padding: 15px 30px !important
+            background-color: #fff
+            color: #254c84
         &_light
             background: linear-gradient(25deg, #1f426a 0%, #4079ff 50%)
         &_row
@@ -51,7 +55,7 @@
             & p
     &-extra
         &_row
-            margin: 0 20px
+            margin: 0 20px 90px
         &__card
             color: #fff
             outline: none !important
@@ -151,15 +155,22 @@
         margin-left: 5px
         & li
             height: 13px
+            list-style-type: none !important
             & button
                 background: #fff
                 opacity: 0.5
                 height: 3px
                 width: 8px
                 padding: 0
+                &::before
+                    display: none !important
+                    opacity: 0
         & .slick-active
             & button
                 opacity: 1
+                &::before
+                    display: none !important
+                    opacity: 0
 .hover-annotation
     position: absolute
     bottom: 32px
@@ -170,5 +181,3 @@
     opacity: 0
     font-size: 12px
     transition: .4s
-
-            
