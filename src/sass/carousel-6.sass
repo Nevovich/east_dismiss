@@ -17,6 +17,8 @@ $wc-main-color: #1f3874
         flex-direction: column
         align-items: center
         transition: all .3s
+        outline: 0 !important
+        max-width: 450px
         & img
             // flex-grow: 1
             margin-left: auto
@@ -49,6 +51,26 @@ $wc-main-color: #1f3874
                 color: #4079ff
             & .westcall-service-card__body a
                 background-color: #4079ff
+@media screen and ( max-width: 430px )
+    .westcall-service
+        &-card
+            margin-right: 10px
+            padding: 15px 25px
+            border: 3px solid $wc-main-color
+            &__title
+                font-size: 22px
+            &__body
+                font-size: 15px
+            & a
+                padding: 15px 50px
+            & img
+                width: fill   
+
+@media screen and ( max-width: 800px ) and (min-width: 460px)
+    .westcall-service
+        &-card
+            margin: 0 calc( (100vw - 456px) / 2 )
+
 
 
 .slick-prev:before 
